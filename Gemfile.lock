@@ -76,8 +76,6 @@ GEM
     factory_bot_rails (6.1.0)
       factory_bot (~> 6.1.0)
       railties (>= 5.0.0)
-    faker (2.15.1)
-      i18n (>= 1.6, < 2)
     ffi (1.14.2)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
@@ -228,14 +226,13 @@ DEPENDENCIES
   capybara (>= 2.15)
   coffee-rails (~> 4.2)
   factory_bot_rails
-  faker
   jbuilder (~> 2.5)
   jquery-rails
   launchy
   listen (>= 3.0.5, < 3.2)
   pg (>= 0.18, < 2.0)
   puma (~> 3.11)
-  rails (~> 5.2.4, >= 5.2.4.4)
+  rails (~> 5.2.4)
   rspec-rails
   sass-rails (~> 5.0)
   selenium-webdriver
