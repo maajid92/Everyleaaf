@@ -21,6 +21,8 @@ ActiveRecord::Schema.define(version: 2021_01_18_032257) do
     t.string "status"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "priority"
+    t.date "Deadline"
   end
 
 end

@@ -2,10 +2,14 @@ source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.6.5'
-# gem 'bootstrap', '~> 4.4.1'
-gem 'rails-i18n', '~> 5.1'
+gem 'bootstrap', '~> 4.4.1'
+# gem 'i18n-timezones'
+# gem 'rails-i18n', '~> 5.1' # For 5.0.x, 5.1.x and 5.2.x
+# gem 'kaminari-bootstrap', '~> 3.0.1'
+gem 'kaminari', '~> 0.17.0'
+gem 'ransack'
 gem 'jquery-rails'
-gem 'rails', '~> 5.2.4'
+gem 'rails', '~> 5.2.4', '>= 5.2.4.4'
 gem 'pg', '>= 0.18', '< 2.0'
 gem 'puma', '~> 3.11'
 gem 'sass-rails', '~> 5.0'
@@ -21,6 +25,7 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'spring-commands-rspec'
   gem 'factory_bot_rails'
+  gem 'faker'
   gem 'launchy'
 
 end
@@ -34,6 +39,7 @@ end
 group :test do
   gem 'capybara', '>= 2.15'
   gem 'selenium-webdriver'
+  gem 'chromedriver-helper'
   gem 'webdrivers'
 end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
