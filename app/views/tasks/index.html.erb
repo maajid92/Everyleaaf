@@ -1,6 +1,5 @@
 <p id="notice"><%= notice %></p>
-<h3>Tasks List</h3>
-<br>
+<h4>general task Lists</h4>
 <span class="search"><%=search_form_for @q do |f| %></span>
 <span class="search"><%=f.label :Task_name %></span>
 <span class="search"><%=f.search_field :name_cont,placeholder: 'Name' %></span>
@@ -8,7 +7,6 @@
 <span class="search"><%=f.search_field :status_cont,placeholder: 'Status' %></span>
 <span><%=f.submit class: 'action-button' %></span>
 <%end %>
-<br>
 <br>
 <span><%= link_to 'New Task', new_task_path,class:"btn btn-primary"%></span>
 <br>
