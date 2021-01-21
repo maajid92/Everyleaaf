@@ -1,6 +1,8 @@
 FactoryBot.define do
   factory :task do
-    name {"MyString"}
-    Details {"lets chat"}
+    name {"Tasks"}
+    Details {"task1"}
+    Deadline {"2021-07-8"}
+
   end
 end
