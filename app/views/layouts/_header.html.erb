@@ -15,6 +15,11 @@
     <li class="nav-item">
       <%= link_to 'Task list' , tasks_path, class: "nav-link" %>
     </li>
+
+    <li class="nav-item">
+      <a class="nav-link" href="#"><%= link_to 'Labels', new_label_path, class: "nav-link" %></a>
+    </li
+
       <li class="nav-item">
       <% if logged_in? %>
       <% if current_user.admin? %>
