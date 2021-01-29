@@ -47,24 +47,25 @@ require 'rails_helper'
  end
 
  describe 'Detail screen accessibility' do
-  context 'An ordinary user should not access the detail screen of another user' do
-        it 'Ordinary user cannot access the detail screen of another user' do
-          user=User.create(name: 'sample',
-                           email: 'sample@gmail.com',
-                           password: 'try95',
-                           password_confirmation:'try95'
-                                 )
-          user=User.create(name: 'mahad', email: 'mahad@gmail.com', password: 'try95',
-                           password_confirmation:'try95')
-          visit new_session_path
-          fill_in 'email', with: 'mahad@gmail.com'
-          fill_in 'password', with: 'try95'
-          click_on 'Log-in'
-          visit user_path(User.first)
-          expect(page).to have_content("Tasks List")
-        end
-      end
-   end
+ context 'An ordinary user should not access the detail screen of another user' do
+       it 'Ordinary user cannot access the detail screen of another user' do
+         user=User.create(name: 'sample',
+                          email: 'sample@gmail.com',
+                          password: 'try95',
+                          password_confirmation:'try95'
+                                )
+         user=User.create(name: 'mahad', email: 'mahad@gmail.com', password: 'try95',
+                          password_confirmation:'try95')
+         visit new_session_path
+         fill_in 'email', with: 'mahad@gmail.com'
+         fill_in 'password', with: 'try95'
+         click_on 'Log-in'
+         visit user_path(User.first)
+         expect(page).to have_content("Tasks List")
+       end
+     end
+  end
+
 
  describe 'Admin management fuctions' do
      context 'Admin users should access the management panel' do
